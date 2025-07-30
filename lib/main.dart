@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:magic_ball/gradient_container.dart';
+import 'package:magic_ball/styled_text.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 205, 197, 158),
-        body: Center(
-          child: Center(
-            child: Text(
-              'Hello, World!',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ),
+        body: GradientContainer(),
       ),
     ),
   );
