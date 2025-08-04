@@ -1,3 +1,4 @@
+//
 import 'package:flutter/material.dart';
 
 class StyledText extends StatelessWidget {
@@ -10,7 +11,6 @@ class StyledText extends StatelessWidget {
     return Text(
       text,
       style: const TextStyle(
-        fontWeight: FontWeight.bold,
         color: Colors.white,
         fontSize: 24,
       ),

@@ -18,13 +18,10 @@ class _MagicBallState extends State<MagicBallWidget> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        const StyledText("Ask me anything!"),
+        const StyledText("Ask a question..."),
         const SizedBox(height: 50),
-        Image.asset(
-          "assets/images/ball_images/1.png",
-          width: 300,
-        ),
-        const SizedBox(height: 50),
+        Image.asset("assets/images/ball_images/1.png", width: 300),
+        const SizedBox(height: 30),
         TextButton(
           onPressed: shake,
           child: const Text(
