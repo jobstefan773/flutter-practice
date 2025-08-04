@@ -3,22 +3,30 @@
 // for the classes we are using pascal case
 // for the variable names we will be using camel case
 import 'package:flutter/material.dart';
-import 'package:magic_ball/styled_text.dart';
+import 'package:magic_ball/magic_ball_widget.dart';
 
-// dart is a type safe language, which means that
-// it will not allow you to set a value of the wrong type
+/* 
+Dart is a type safe language, which means that it will not allow you to set 
+a value of the wrong type .
+Uses Type Inferencing - determines the data type basd on the initial value
+Dynamic - it can be anything unsafe & needdeed to be cast to a specific data type
+*/
+
 const Alignment alignmentTopLeft = Alignment.topLeft;
-// type annotation, we explicitly define the data type
+// Type Annotation - we can explicitly define the data type
 
 const alignmentBottomRight = Alignment.bottomRight;
-// type inference. based on initial value
+// Type Inference - based on initial value
 
 const topLeft = Alignment.topLeft;
-final greeting = "Hello, World!";
 // the values are actually replaced during compile time
-// the values should already be known like literals
+// the values should already be known like literals, enums, etc.
 
 final bottomRight = Alignment.bottomRight;
+// final - can only be set once. Known during run time.
+
+List<String> listofWords = [];
+List<int> listOfNumbers = [1, 2, 3, 4, 5];
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
@@ -29,14 +37,16 @@ class GradientContainer extends StatelessWidget {
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 0, 89, 255),
-            Color.fromARGB(249, 21, 0, 60),
+            Colors.red,
+            Colors.yellow,
           ],
           begin: alignmentTopLeft,
           end: alignmentBottomRight,
         ),
       ),
-      child: const Center(child: StyledText("YAWA MAN DIAY KA!")),
+      child: const Center(
+        child: MagicBallWidget(),
+      ),
     );
   }
 }
